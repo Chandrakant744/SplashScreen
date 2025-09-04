@@ -1,16 +1,15 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import {
   View,
   Text,
   StyleSheet,
-  ActivityIndicator,
   StatusBar,
   ImageBackground,
   Dimensions,
   Image,
 } from 'react-native';
-import {NativeStackNavigationProp} from '@react-navigation/native-stack';
-import {RootStackParamList} from '../../App';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { RootStackParamList } from '../../App';
 import { COLORS, FONT_SIZES, SPLASH_DURATION } from '../utils/constants';
 import strings from '../utils/strings';
 
@@ -23,9 +22,9 @@ interface Props {
   navigation: SplashScreenNavigationProp;
 }
 
-const {width, height} = Dimensions.get('window');
+const { width, height } = Dimensions.get('window');
 
-const SplashScreen: React.FC<Props> = ({navigation}) => {
+const SplashScreen: React.FC<Props> = ({ navigation }) => {
   useEffect(() => {
     // app initialization
     const timer = setTimeout(() => {
@@ -42,20 +41,16 @@ const SplashScreen: React.FC<Props> = ({navigation}) => {
         source={require('../assets/splash-background.jpeg')}
         style={styles.backgroundImage}
         resizeMode='cover'
-        >
+      >
         <View style={styles.content}>
           <Image
             style={styles.icon}
             source={require('../assets/logo.jpeg')}
-            resizeMode='contain'/>
+            resizeMode='contain' />
           <Text style={styles.title}>{strings.title}</Text>
           <Text style={styles.subtitle}>{strings.subtitle}</Text>
           <Text style={styles.body}>{strings.body}</Text>
-          <ActivityIndicator
-            size="large"
-            color={COLORS.secondary}
-            style={styles.loader}
-          />
+
         </View>
       </ImageBackground>
     </View>
