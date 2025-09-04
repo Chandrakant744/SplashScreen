@@ -25,7 +25,7 @@ interface Props {
 const LandingScreen: React.FC<Props> = ({navigation}) => {
   const handleGetStarted = () => {
     // Navigate to next screen or perform action
-    Alert.alert('Get Started pressed');
+    Alert.alert('Get Started pressed!');
   };
 
   const handleBackToSplash = () => {
