@@ -2,11 +2,11 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import SplashScreen from './src/screens/SplashScreen';
-import LandingScreen from './src/screens/LandingScreen';
+import IntroductionScreen from './src/screens/IntroductionScreen';
 
 export type RootStackParamList = {
   Splash: undefined;
-  Landing: undefined;
+  Introduction: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -20,7 +20,7 @@ function App(): JSX.Element {
           headerShown: false,
         }}>
         <Stack.Screen name="Splash" component={SplashScreen} />
-        <Stack.Screen name="Landing" component={LandingScreen} />
+        <Stack.Screen name="Introduction" component={IntroductionScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

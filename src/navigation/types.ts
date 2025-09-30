@@ -1,6 +1,6 @@
 export type RootStackParamList = {
   Splash: undefined;
-  Landing: undefined;
+  Introduction: undefined;
 };
 
 export type ScreenNames = keyof RootStackParamList;

@@ -28,7 +28,7 @@ const SplashScreen: React.FC<Props> = ({ navigation }) => {
   useEffect(() => {
     // app initialization
     const timer = setTimeout(() => {
-      navigation.replace('Landing');
+      navigation.replace('Introduction');
     }, SPLASH_DURATION);
 
     return () => clearTimeout(timer);
